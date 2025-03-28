@@ -19,6 +19,7 @@ win_counts.columns = ["Country", "Wins", "Runner Up"]
 
 
 app = Dash(external_stylesheets = [BOOTSTRAP_CSS])
+server = app.server
 
 app.layout = html.Div(
     [
@@ -148,4 +149,4 @@ def update_graph(filter_type, selected_country, selected_year):
     return fig
 
 if __name__ == '__main__':
-	app.run_server(debug=True)
+    app.run_server(debug=False)
